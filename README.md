@@ -27,6 +27,7 @@ Es´ta usando una conexión a una base de datos MySQL.
 
 
 ### Ruta de API
+```
  1) [GET] /dev/user/list
     
     (response) respuesta de servicio
@@ -81,7 +82,7 @@ Es´ta usando una conexión a una base de datos MySQL.
         "success": true,
         "data": null
       }
-
+```
 ### Creditos
   Este proyecto fue desarrollado por 
   Jhuorley Quispicusi perez
