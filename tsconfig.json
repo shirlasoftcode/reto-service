@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "outDir": "./dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "target": "es5",
+    "moduleResolution": "node",
+    "lib": ["es2015"],
+  },
+  "include": ["src/**/*", "../back-end-models/src/api-response.serializer.ts"],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "__tests__/**/*"
+  ]
+}

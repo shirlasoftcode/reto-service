@@ -1,0 +1,47 @@
+org: jhuorley
+app: api-jhuorley
+service: reto-service
+useDotenv: true
+frameworkVersion: '3.9.0'
+plugins:
+  - serverless-offline
+provider:
+  name: aws
+  runtime: nodejs14.x
+  environment:
+    DB_HOST: ${env:DB_HOST}
+    DB_NAME: ${env:DB_NAME}
+    DB_USERNAME: ${env:DB_USERNAME}
+    DB_PASSWORD: ${env:DB_PASSWORD}
+    
+functions:
+  - User:
+      handler: dist/modules/user/user.handler.controller
+      events:
+        - http:
+            method: ANY
+            path: /user
+        - http: 
+            method: get
+            path: user/list
+        - http: 
+            method: get
+            path: user/list/id/{id}
+        - http:
+            method: post
+            path: user/insert
+        - http:
+            method: put
+            path: user/update/{id}
+  - People:
+      handler: dist/modules/people/people.handler.controller
+      events:
+        - http:
+            method: get
+            path: people/list
+        - http:
+            method: get
+            path: people/list/id/{id}
+
+  
+  
